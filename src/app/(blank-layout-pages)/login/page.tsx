@@ -14,7 +14,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false)
   const router = useRouter()
 
-  const handleLogin = async e => {
+  const handleLogin = async (e:any) => {
     e.preventDefault()
     setError('')
     setLoading(true)
@@ -25,7 +25,7 @@ export default function Login() {
       const user = userCredential.user
 
       // Fetch user data from Firestore
-      const userDoc = await getDoc(doc(db, 'users', user.email))
+      const userDoc = await getDoc(doc(db, 'users', user.email ?? ''))
 
       if (userDoc.exists()) {
         const userRole = userDoc.data().role
