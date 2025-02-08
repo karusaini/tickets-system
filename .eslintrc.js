@@ -11,6 +11,8 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    'padding-line-between-statements': 'off',
+    'import/order': 'off',
     'lines-around-comment': [
       'error',
       {

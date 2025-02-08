@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
+
 import { auth, db } from '@/libs/firebase'
-import { doc, getDoc } from 'firebase/firestore'
+import { doc, getDoc, collection } from 'firebase/firestore'
 
 const useAuth = (requiredRole: string) => {
   const [user, setUser] = useState<any>(null)
